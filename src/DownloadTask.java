@@ -5,6 +5,14 @@ public class DownloadTask extends Thread {
         this.fileName = fileName;
     }
 
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
+
     @Override
     public void run() {
         super.run();
@@ -15,7 +23,7 @@ public class DownloadTask extends Thread {
         try {
            Thread.sleep(1000L * multiplier);
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
         System.out.println(this.fileName + " downloaded in " + multiplier + " seconds");

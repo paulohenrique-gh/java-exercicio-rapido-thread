@@ -16,7 +16,7 @@ public class Main {
             downloadFile3.join();
             downloadFile4.join();
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
 
         System.out.println("All files have been downloaded");
